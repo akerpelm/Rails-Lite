@@ -48,7 +48,7 @@ class ControllerBase
     _class = self.class.name.underscore
     _html = (File.read("views/#{_class}/#{template_name}.html.erb"))
     temp = ERB.new(_html)
-    render_content(temp.result(binding), 'text/html')
+    render_content(temp.result(binding), "text/html")
     
     # temp = ERB.new(File.read("views/#{self.class.name.underscore}/#{template_name}.html.erb"))
     # render_content(temp.result(binding),"text/html")
